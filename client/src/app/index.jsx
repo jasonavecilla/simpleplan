@@ -1,10 +1,10 @@
-import Counter from "../components/counter-example/index";
+import Counter from '../components/counter-example/index'
 function App() {
-    return (
-        <>
-            <Counter initialCount={0} />
-        </>
-    );
+	return (
+		<>
+			<Counter initialCount={0} />
+		</>
+	)
 }
 
-export default App;
+export default App
