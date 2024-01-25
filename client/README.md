@@ -31,7 +31,7 @@ Commit examples:
 
 - **assets:** Folder for icons and images.
 
-- **components:** Folder for dump components responsible only for displaying content and unaware of the environment.
+- **components:** Folder for dumb components responsible only for displaying content and unaware of the environment.
 
   - **name-of-component:** Folder for each component and its stylesheet. Use kebab-case for naming the folder. Follow the example in `client/src/components/counter-example` for reference.
 
