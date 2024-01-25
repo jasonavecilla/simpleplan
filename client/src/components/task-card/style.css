@@ -1,0 +1,32 @@
+.TaskCard {
+	background: #d9d9d9;
+	padding: 1em;
+	width: 100%;
+}
+.TaskCard__title {
+	font-size: 1.0625rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+    margin-bottom: 0.5em;
+}
+.TaskCard__description {
+	font-size: 0.875rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+    margin-bottom: 1em;
+}
+
+.TaskCard__category {
+	padding: 0.2em;
+	font-size: 0.8125rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4)
+}
+
+.TaskCard__btn {
+	font-size: 0.8125rem;
+	background: #fff;
+	padding: 0.25em 0.5em;
+	border: none;
+}

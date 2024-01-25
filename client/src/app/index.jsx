@@ -1,8 +1,8 @@
-import Counter from '../components/counter-example/index'
+import DailyTasks from "./daily-tasks"
 function App() {
 	return (
 		<>
-			<Counter initialCount={0} />
+			<DailyTasks/>
 		</>
 	)
 }

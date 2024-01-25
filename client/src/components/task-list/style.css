@@ -1,0 +1,7 @@
+.DailyTaskList {
+	padding: 1.75em;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+}
+
