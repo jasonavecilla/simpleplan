@@ -1,8 +1,8 @@
-import DailyTasks from "./daily-tasks"
+import DailyTasks from './daily-tasks'
 function App() {
 	return (
 		<>
-			<DailyTasks/>
+			<DailyTasks />
 		</>
 	)
 }

@@ -9,14 +9,7 @@ import './style.css'
  * @returns {JSX.Element} - Rendered DailyTaskList component
  */
 function TaskList({children}) {
-
-
-
-	return (
-		<div className='DailyTaskList'>
-			{children}
-		</div>
-	)
+	return <div className='DailyTaskList'>{children}</div>
 }
 
 export default TaskList

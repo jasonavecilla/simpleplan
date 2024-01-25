@@ -14,12 +14,18 @@
  * const result = getWeekDay(currentDate); // Output: The name of the current day of the week
  */
 const getWeekDay = (date) => {
-    const daysOfWeek = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
-    const dayIndex = new Date(date).getDay();
-    return daysOfWeek[dayIndex];
-};
-
-
+	const daysOfWeek = [
+		'sunday',
+		'monday',
+		'tuesday',
+		'wednesday',
+		'thursday',
+		'friday',
+		'saturday',
+	]
+	const dayIndex = new Date(date).getDay()
+	return daysOfWeek[dayIndex]
+}
 
 /**
  * Returns an array of tasks scheduled for a specific date.
@@ -31,10 +37,10 @@ const getWeekDay = (date) => {
  */
 export const getDailyTask = (date, data) => {
 	const initialState = []
-    const dayOfMonth = new Date(date).getDate()
-	console.log(dayOfMonth);
-    const dayOfWeek = getWeekDay(date)
-	console.log(dayOfWeek);
+	const dayOfMonth = new Date(date).getDate()
+	console.log(dayOfMonth)
+	const dayOfWeek = getWeekDay(date)
+	console.log(dayOfWeek)
 	data.forEach((category) => {
 		category.activityTypes.forEach((activityType) => {
 			activityType.Tasks.forEach((task) => {
@@ -53,4 +59,3 @@ export const getDailyTask = (date, data) => {
 
 	return initialState
 }
-

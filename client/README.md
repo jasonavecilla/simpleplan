@@ -25,6 +25,12 @@ Commit examples:
 [feature/number of task from backlog or name of task]: Add phone number input field validation
 ```
 
+Before committing you code run formalin script to keep code styling for all team the same:
+
+```
+npm run format
+```
+
 ## Source Directory
 
 - **app:** Folder for smart components containing business logic.
