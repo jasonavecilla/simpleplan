@@ -40,6 +40,7 @@ Commit examples:
     - **style.css:** Stylesheet for the component. Always use `style.css`.
 
 - **redux:** Folder for the Redux store.
+- **util:** Folder for helper functions.
 
 ## Class names rule
 Use BEM (Block Element Modifier) methodology for naming classes in your JSX and CSS.
