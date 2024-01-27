@@ -38,9 +38,7 @@ const getWeekDay = (date) => {
 export const getDailyTask = (date, data) => {
 	const initialState = []
 	const dayOfMonth = new Date(date).getDate()
-	console.log(dayOfMonth)
 	const dayOfWeek = getWeekDay(date)
-	console.log(dayOfWeek)
 	data.forEach((category) => {
 		category.activityTypes.forEach((activityType) => {
 			activityType.Tasks.forEach((task) => {
@@ -58,4 +56,13 @@ export const getDailyTask = (date, data) => {
 	})
 
 	return initialState
+}
+
+export const isToday = (inputDate) => {
+	const today = new Date()
+	return (
+		inputDate.getDate() === today.getDate() &&
+		inputDate.getMonth() === today.getMonth() &&
+		inputDate.getFullYear() === today.getFullYear()
+	)
 }
