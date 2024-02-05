@@ -25,13 +25,19 @@ Commit examples:
 [feature/number of task from backlog or name of task]: Add phone number input field validation
 ```
 
+Before committing you code run formalin script to keep code styling for all team the same:
+
+```
+npm run format
+```
+
 ## Source Directory
 
 - **app:** Folder for smart components containing business logic.
 
 - **assets:** Folder for icons and images.
 
-- **components:** Folder for dump components responsible only for displaying content and unaware of the environment.
+- **components:** Folder for dumb components responsible only for displaying content and unaware of the environment.
 
   - **name-of-component:** Folder for each component and its stylesheet. Use kebab-case for naming the folder. Follow the example in `client/src/components/counter-example` for reference.
 
@@ -40,6 +46,7 @@ Commit examples:
     - **style.css:** Stylesheet for the component. Always use `style.css`.
 
 - **redux:** Folder for the Redux store.
+- **util:** Folder for helper functions.
 
 ## Class names rule
 Use BEM (Block Element Modifier) methodology for naming classes in your JSX and CSS.

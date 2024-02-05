@@ -1,0 +1,14 @@
+.Row {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+.Row-space-between {
+	justify-content: space-between;
+}
+.Row-space-around {
+	justify-content: space-around;
+}
+.Row-center {
+	justify-content: center;
+}
