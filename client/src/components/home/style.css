@@ -1,0 +1,64 @@
+:root {
+    --add-edit-bg: #eae0cc;
+    --add-save: #f49f0a;
+}
+
+.Home {
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: #0f0a0a; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.AddEdit__show {
+    background-color: var(--add-save);
+    width: 100px;
+    padding: 10px;
+    border-radius: 7px;
+    color: var(--add-edit-bg);
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid var(--add-edit-bg);
+    z-index: 101;
+    box-shadow: 0px 0px 10px 10px rgb(255, 85, 0);
+}
+
+.AddEdit__cancel {
+    background-color: rgb(255, 85, 0);
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 5px 5px 20px 2px #f49f0a;
+    z-index: 101;
+}
+.Home__fixed-items {
+    z-index: 100;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+
+.Home__blurry {
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+    /* background-color: #ffffff99; */
+    backdrop-filter: blur(2px);
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    background-image: radial-gradient(#ffffff, #e68484);
+}
+

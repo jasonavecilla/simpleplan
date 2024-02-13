@@ -1,0 +1,22 @@
+
+@keyframes saveNotification {
+    0% {opacity: 1; right: 20%;}
+    80%{opacity: 0.5; right: 100%;}
+    100% {opacity: 0; right: 50%;}
+}
+
+.HomeButtons {
+    border-radius: 7px;
+    position: absolute;
+    /* right: -0%;
+    top: -20px; */
+    padding: 10px;
+    font-size: 20px;
+    background-color: orange;
+    animation: saveNotification 2s;
+    /* transition: none; */
+}
+
+
+
+

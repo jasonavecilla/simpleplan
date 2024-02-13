@@ -1,0 +1,76 @@
+:root {
+    --task-date-color: #5e4ae3;
+}
+
+.DisplayTasks {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    /* background-color: white; */
+    color: black;
+    padding: 20px;
+    gap: 25px;
+}
+
+.DisplayTasks > * {
+    border-radius: 7px;
+    font-size: 20px;
+}
+
+.DisplayTasks__date, .DisplayTasks__navigate {
+    background-color: var(--task-date-color);
+    color: antiquewhite;
+    padding: 20px;
+}
+
+.DisplayTasks__date {
+    width: fit-content;
+}
+
+.DisplayTasks__navigate :nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.DisplayTasks__navigate :nth-child(1) > *{
+    background-color: black;
+    padding: 3px;
+    width: 90px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 7px;
+}
+
+.DisplayTasks__change-date {
+    padding: 20px 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.DisplayTasks__task, .DisplayTasks__task > * {
+    display: flex;
+    text-transform: capitalize;
+}
+
+.DisplayTasks__task {
+    padding: 20px;
+    background-color: white;
+}
+.DisplayTasks__task :nth-child(1) {
+    gap: 5px;
+    flex-direction: column;
+}
+
+.DisplayTasks__task-name {
+    font-size: 30px;
+}
+.DisplayTasks__task-category {
+    background-color: black;
+    width: fit-content;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 7px;
+}

@@ -1,0 +1,63 @@
+:root {
+    --add-edit-bg: #eae0cc;
+    --add-save: #f49f0a;
+}
+
+
+.AddEdit {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.AddEdit__form {
+    margin-top: calc(20vw);
+    padding: 20px;
+}
+
+.AddEdit__form, .AddEdit__button {
+    width: calc(100% - 40px);
+    height: fit-content;
+    background-color: var(--add-edit-bg);
+    border-radius: 7px 7px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.AddEdit__button{
+    align-items: center;
+    border-radius: 0 0 7px 7px;
+    padding-bottom: 20px;
+    z-index: 101;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.AddEdit__save {
+    background-color: var(--add-save);
+    width: 200px;
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 20px;
+}
+
+.AddEdit__input{
+    border-radius: 5px;
+    display: block;
+    font-size: 20px;
+    padding: 5px;
+    width: 100%;
+    border: 2px solid black;
+}
+
+@media (min-width:450px) {
+.AddEdit__form, .AddEdit__button {
+    max-width: 750px;
+}
+
+.AddEdit__form {
+    margin-top: 250px;
+}
+}
