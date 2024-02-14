@@ -31,6 +31,7 @@ To fill
 - Meeting - Voyage Kickoff --> ./docs/01.10_V47 Kick-off.md
 - Meeting - App Vision & Feature Planning --> ./docs/01.11-12_V47_Feature PLanning.md
 - Meeting - Sprint Open Topic Session --> ./docs/01.10_V47_open_topic_session.md
+- Meeting - Sprint Retro and Planning --> ./docs/01.22_V47_sprint_retrospective_review_and_planning
 
 ### Contributors
 @ilanza - Product Owner
