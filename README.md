@@ -1,28 +1,40 @@
-# voyage-tasks
+# App Name (tbd!)
 
-Your project's `readme` is as important to success as your code. For 
-this reason you should put as much care into its creation and maintenance
-as you would any other component of the application.
+## Overview
 
-If you are unsure of what should go into the `readme` let this article,
-written by an experienced Chingu, be your starting point - 
-[Keys to a well written README](https://tinyurl.com/yk3wubft).
+**Vision:** We aim to create a simple and enjoyable web app for managing tasks that anyone can use easily, making it clear and practical for everyday use.
 
-And before we go there's "one more thing"! Once you decide what to include
-in your `readme` feel free to replace the text we've provided here.
+**Users:** Average worker or student, that needs his daily tasks to be organised and easily 
 
-> Own it & Make it your Own!
+**Key Values:** accessible. easy to use, fast, everyday use, practical, for everyone, clear, fun
+
+## Features
+
+- View daily tasks
+- Add task
+- Add title and description for each task
+- Mark task completed
+- See only to dos (hide completed tasks)
 
 ## Team Documents
 
-You may find these helpful as you work together to organize your project.
+- [Figma file](https://www.figma.com/file/Vh1YyNdb59fyKBH4paDfNR/Our-project?type=design&node-id=0-1&mode=design&t=gHTozEQwf1c42BSL-0)
+- [Miro Board](https://miro.com/app/board/uXjVN6gGsh4=/)
+- [Github Project](https://github.com/orgs/chingu-voyages/projects/200/views/3)
 
-- [Team Project Ideas](./docs/team_project_ideas.md)
-- [Team Decision Log](./docs/team_decision_log.md)
+## Tech Used / Dependencies
+To fill
 
-Meeting Agenda templates (located in the `/docs` directory in this repo):
 
-- Meeting - Voyage Kickoff --> ./docs/meeting-voyage_kickoff.docx
-- Meeting - App Vision & Feature Planning --> ./docs/meeting-vision_and_feature_planning.docx
-- Meeting - Sprint Retrospective, Review, and Planning --> ./docs/meeting-sprint_retrospective_review_and_planning.docx
-- Meeting - Sprint Open Topic Session --> ./docs/meeting-sprint_open_topic_session.docx
+### Meeting Agenda documents (located in the `/docs` directory in this repo):
+
+- Meeting - Voyage Kickoff --> ./docs/01.10_V47 Kick-off.md
+- Meeting - App Vision & Feature Planning --> ./docs/01.11-12_V47_Feature PLanning.md
+- Meeting - Sprint Open Topic Session --> ./docs/01.10_V47_open_topic_session.md
+
+### Contributors
+@ilanza - Product Owner
+
+@BreeMudi - Developer
+
+@Alex Shef - Developer
