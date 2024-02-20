@@ -12,14 +12,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install CLI
-        run: npm install --global vercel@latest
+      # - name: Install CLI
+      #   run: npm install --global vercel@latest
 
-      - name: Pull Environments
-        run: vercel pull --yes --environment=preview --token=MZ2KxEYnGCm3lIwS8ZEodEwf
+      # - name: Pull Environments
+      #   run: vercel pull --yes --environment=preview --token=MZ2KxEYnGCm3lIwS8ZEodEwf
 
-      - name: Build
-        run: vercel build --token=MZ2KxEYnGCm3lIwS8ZEodEwf
+      # - name: Build
+      #   run: vercel build --token=MZ2KxEYnGCm3lIwS8ZEodEwf
 
-      - name: Deploy
-        run: vercel deploy --prebuilt --token=MZ2KxEYnGCm3lIwS8ZEodEwf
+      # - name: Deploy
+      #   run: vercel deploy --prebuilt --token=MZ2KxEYnGCm3lIwS8ZEodEwf
