@@ -1,19 +1,33 @@
 import './style.css'
 import AddEdit from '../add-edit'
 import {useEffect, useState} from 'react'
-import DisplayTasks from '../display-tasks'
-// import HomeButtons from '../home-buttons'
+import MainDisplay from '../main-display'
+import EachTask from '../each-task'
+import NavigateTask from '../navigate-task'
 
 const Home = () => {
-	const [data, updateData] = useState([])
+	const [data, updateData] = useState(JSON.parse(initiateTaskList()))
 	const [showStatus, setShowStatus] = useState(false)
-	// const [saved, setUpdateSaved] = useState(false)
+
+	const findLastId = () => {
+		let thisId = 0
+		try {
+			thisId = data[data.length - 1].taskId
+			console.log(thisId)
+		} catch {
+			thisId
+		}
+		return thisId
+	}
 
 	const [taskName, setTaskName] = useState('')
 	const [taskDesc, setTaskDesc] = useState('')
 	const [taskCategory, setTaskCategory] = useState('')
 	const [taskStartDate, setTaskStartDate] = useState('')
 	const [taskDueDate, setTaskDueDate] = useState('')
+	const [taskId, setTaskId] = useState(findLastId())
+
+	const [showCompleted, setshowCompleted] = useState(false)
 
 	const handleName = (event) => {
 		setTaskName(event.target.value)
@@ -31,39 +45,121 @@ const Home = () => {
 		setTaskDueDate(event.target.value)
 	}
 
-	const resetData = () => {
+	const handleTaskId = () => {
+		setTaskId((taskId) => taskId + 1)
+		console.log('task Id upon Call' + taskId)
+	}
+
+	function initiateTaskList() {
+		// localStorage.clear('listless')
+		return localStorage.getItem('listless')
+			? localStorage.getItem('listless')
+			: setGet()
+	}
+
+	function setGet() {
+		localStorage.setItem('listless', JSON.stringify([]))
+		return localStorage.getItem('listless')
+	}
+
+	const resetInputData = () => {
 		setTaskName('')
 		setTaskCategory('')
 		setTaskDesc('')
 		setTaskStartDate('')
 		setTaskDueDate('')
+		// setTaskId(0)
 	}
 
 	const handleSave = () => {
 		if (taskName !== '') {
-			let dataToSave = [
-				taskName,
-				taskDesc,
-				taskCategory,
-				taskStartDate,
-				taskDueDate,
-			]
-			data.push(...[dataToSave])
-			console.log(data)
+			handleTaskId()
+			console.log(taskId)
+			let dataToSave = {
+				taskName: taskName,
+				taskDesc: taskDesc,
+				taskCategory: taskCategory,
+				taskStartDate: taskStartDate,
+				taskDueDate: taskDueDate,
+				completed: false,
+				taskId: taskId,
+			}
+			// data.push([...[dataToSave]])
+			updateData([...data, dataToSave])
+			localStorage.setItem('listless', JSON.stringify(data))
 			setShowStatus(false)
-			resetData()
+			resetInputData()
 		} else {
 			alert('insert task Title')
 		}
-		// setUpdateSaved(true)
 	}
 	useEffect(() => {
-		console.log('EFFECT: ' + data.length)
-	}, [data.length])
+		console.log(data)
+	}, [data])
+
+	function handleTaskCompletion(event) {
+		let pHData = data
+		const check = Number(event.target.value)
+		const completionIndex = pHData.findIndex((obj) => obj.taskId === check)
+		pHData[completionIndex].completed = !pHData[completionIndex].completed
+		updateData([...pHData])
+		localStorage.setItem('listless', JSON.stringify(data))
+	}
+
+	function handleTaskDelete(event) {
+		let pHData = data
+		const check = Number(event.target.value)
+		const completionIndex = pHData.findIndex((obj) => obj.taskId === check)
+		pHData.splice(completionIndex, 1)
+		updateData([...pHData])
+		localStorage.setItem('listless', JSON.stringify(data))
+	}
+
+	function handleShowCompletedTask() {
+		setshowCompleted(!showCompleted)
+		return showCompleted
+	}
+
+	function checkCompleted(completed) {
+		return completed.completed === showCompleted
+	}
+	function notCompleted(completed) {
+		return completed.completed === false
+	}
+	function countCompleted() {
+		return data.filter(notCompleted).length
+	}
+
+	function handleMoveSwitch() {
+		let SliderClassName = ''
+		showCompleted === true
+			? (SliderClassName = 'NavigateTasks__completed-switch-on')
+			: (SliderClassName = 'NavigateTasks__completed-switch-off')
+		return SliderClassName
+	}
 
 	return (
 		<div className='Home'>
-			<DisplayTasks tasks={data} />
+			<MainDisplay
+				taskStats={countCompleted()}
+				totalTasks={data.length}
+				nav={
+					<NavigateTask
+						showCompletedTasks={handleShowCompletedTask}
+						moveSwitch={handleMoveSwitch()}
+					/>
+				}
+				display={data.filter(checkCompleted).map((item) => (
+					<EachTask
+						thisTask={item}
+						key={item.taskId}
+						thisTaskId={item.taskId}
+						changeCompletedStatus={handleTaskCompletion}
+						deleteTask={handleTaskDelete}
+					/>
+				))}
+			/>
+
 			{showStatus && (
 				<div className='Home__fixed-items'>
 					{showStatus && <button className='Home__blurry'></button>}
@@ -87,7 +183,6 @@ const Home = () => {
 							X
 						</button>
 					)}
-					{/* how do i manipulate the button in the addEdit to close or open: done*/}
 					{showStatus && (
 						<div className='AddEdit__button'>
 							<button className='AddEdit__save' onClick={handleSave}>
@@ -95,7 +190,6 @@ const Home = () => {
 							</button>
 						</div>
 					)}
-					{/* {saved && <HomeButtons name='ITEM SAVED' />} */}
 				</div>
 			)}
 

@@ -62,11 +62,6 @@ const AddEdit = (props) => {
 					/>
 				</div>
 			</form>
-			{/* <div className='AddEdit__button'>
-				<button className='AddEdit__save' onClick={handleSave}>
-					SAVE
-				</button>
-			</div> */}
 		</div>
 	)
 }

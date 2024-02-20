@@ -1,0 +1,25 @@
+@keyframes welcomepage {
+    0% {left: 0;}
+    100% {left: -100%;}
+}
+
+.Welcome {
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(90deg, var(--add-save), var(--task-date-color) );
+    background-color: var(--task-date-color);
+    z-index: 1000;
+    position: absolute;
+    width: 100vw;
+    animation: welcomepage 3s;
+}
+
+.Welcome :nth-child(1) {
+    font-size: 30px;
+}
+.Welcome :nth-child(2) {
+    font-size: 50px;
+}

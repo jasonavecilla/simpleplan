@@ -1,20 +1,21 @@
-.Header {
-	padding: 3.25rem 1.25rem;
+.Header__stats {
+	color: #d9d9d9;
+	background-color: rgb(53, 55, 55);
+	text-align: center;
+    border-radius: 7px;
+	min-height: clamp(130px, 20vw, 150px);
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
-	border-bottom: 1px solid #d9d9d9;
-}
-.Header__title {
-	font-size: 2.56rem;
-	font-weight: 400;
-	max-width: 60%;
 }
 
-.Header__btn {
-	font-size: 1.3125rem;
-	line-height: normal;
-	background: #d9d9d9;
-	border: none;
-	padding: 0.5em 1em;
+.Header {
+	display: flex;
+	align-items: center;
+	gap: 20px;
 }
+
+.Header >* {
+	flex: auto 1;
+}
+

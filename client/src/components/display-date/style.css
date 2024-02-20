@@ -1,0 +1,21 @@
+:root {
+    --task-date-color: #5e4ae3;
+}
+
+.DisplayDate{
+    background-color: var(--task-date-color);
+    color: antiquewhite;
+    padding: 20px;
+    width: fit-content;
+    min-height: clamp(130px, 20vw, 150px);
+    border-radius: 7px;
+    flex-direction: column;
+}
+
+.DisplayDate :nth-child(1) {
+    font-size: clamp(45px, 9vw, 70px);
+}
+
+.DisplayDate :nth-child(2) {
+    font-size: 25px;
+}
