@@ -1,4 +1,4 @@
-# App Name (tbd!)
+# App Name (SimplePlan)
 
 ## Overview
 
