@@ -1,13 +1,14 @@
 <<<<<<< HEAD
 
 =======
+
 # App Name (SimplePlan)
 
 ## Overview
 
 **Vision:** We aim to create a simple and enjoyable web app for managing tasks that anyone can use easily, making it clear and practical for everyday use.
 
-**Users:** Average worker or student, that needs his daily tasks to be organised and easily 
+**Users:** Average worker or student, that needs his daily tasks to be organised and easily
 
 **Key Values:** accessible. easy to use, fast, everyday use, practical, for everyone, clear, fun
 
@@ -26,6 +27,7 @@
 - [Github Project](https://github.com/orgs/chingu-voyages/projects/200/views/3)
 
 ## Tech Used / Dependencies
+
 - This is a React App with vanilla CSS
 - Add-On packages include
   - [Prettier](https://marketplace.visualstudio.com/publishers/esbenp)
@@ -35,7 +37,6 @@
 - Fonts - [Google Fonts](https://fonts.google.com/)
 - Welcome image - [Undraw](https://undraw.co/search)
 
-
 ### Meeting Agenda documents (located in the `/docs` directory in this repo):
 
 - Meeting - Voyage Kickoff --> ./docs/01.10_V47 Kick-off.md
@@ -44,9 +45,11 @@
 - Meeting - Sprint Retro and Planning --> ./docs/01.22_V47_sprint_retrospective_review_and_planning
 
 ### Contributors
+
 @ilanza - Product Owner
 
 @BreeMudi - Developer
 
 @Alex Shef - Developer
->>>>>>> 4d28b468e54cddef6b9db392366fce1418ae6a4d
+
+> > > > > > > 4d28b468e54cddef6b9db392366fce1418ae6a4d
