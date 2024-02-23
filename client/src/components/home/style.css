@@ -100,7 +100,19 @@
     padding: 40px 20px 20px 20px;
     border-radius: 10px;
     font-size: 20px;
+}
+
+.Home__delete-all-warning{
     width: 200px;
+}
+
+.Home__show-info {
+    max-width: 800px;
+}
+.Home__show-info>p{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .Home__delete-all-warning > img, .Home__show-info>img {

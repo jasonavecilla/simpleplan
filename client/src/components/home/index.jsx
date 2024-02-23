@@ -247,7 +247,18 @@ const Home = () => {
 										className='Home__close-button'
 									/>
 									<img src={info} alt='info icon' />
-									<p>This is a great app to manage your tasks</p>
+									<p>
+										<span>
+											This is a simple and enjoyable web app created for
+											managing tasks that anyone can use easily making it clear
+											and practical for everyday use.{' '}
+										</span>
+										<br />
+										<span>
+											It is ideal for the average worker or student that needs
+											his daily tasks to be easily organised clear and fun.{' '}
+										</span>
+									</p>
 								</div>
 							</>
 						)}

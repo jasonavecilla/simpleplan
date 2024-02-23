@@ -1,8 +1,9 @@
-// import {useEffect, useState} from 'react'
+import {useEffect} from 'react'
 import './style.css'
 
 const AddEdit = (props) => {
 	const category = ['Choose', 'Fun', 'School', 'Chores']
+
 	return (
 		<div className='AddEdit'>
 			<form className='AddEdit__form'>
