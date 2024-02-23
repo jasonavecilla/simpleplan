@@ -23,7 +23,14 @@
 - [Github Project](https://github.com/orgs/chingu-voyages/projects/200/views/3)
 
 ## Tech Used / Dependencies
-To fill
+- This is a React App with vanilla CSS
+- Add-On packages include
+  - [Prettier](https://marketplace.visualstudio.com/publishers/esbenp)
+  - [Live server](https://github.com/ritwickdey/vscode-live-server)
+  - [Auto Import ES6](https://marketplace.visualstudio.com/items?itemName=NuclleaR.vscode-extension-auto-import)
+- Icons - [Fontawesome](https://fontawesome.com/)
+- Fonts - [Google Fonts](https://fonts.google.com/)
+- Welcome image - [Undraw](https://undraw.co/search)
 
 
 ### Meeting Agenda documents (located in the `/docs` directory in this repo):
