@@ -2,7 +2,7 @@
 import './style.css'
 
 const AddEdit = (props) => {
-	const category = ['Fun', 'School', 'Chores']
+	const category = ['Choose', 'Fun', 'School', 'Chores']
 	return (
 		<div className='AddEdit'>
 			<form className='AddEdit__form'>
@@ -41,7 +41,7 @@ const AddEdit = (props) => {
 						))}
 					</select>
 				</div>
-				<div className='AddEdit__field'>
+				{/* <div className='AddEdit__field'>
 					<p className='AddEdit__title'>Start Date</p>
 					<input
 						type='date'
@@ -60,7 +60,13 @@ const AddEdit = (props) => {
 						onChange={props.handleDueDate}
 						name='4'
 					/>
-				</div>
+				</div> */}
+				{/* <button
+					onClick={() => props.saveAndClose}
+					style={{padding: '20px', width: '100px'}}
+				>
+					SaveAdd
+				</button> */}
 			</form>
 		</div>
 	)

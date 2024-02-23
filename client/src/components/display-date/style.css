@@ -13,7 +13,7 @@
 }
 
 .DisplayDate :nth-child(1) {
-    font-size: clamp(45px, 9vw, 70px);
+    font-size: clamp(35px, 9vw, 50px);
 }
 
 .DisplayDate :nth-child(2) {

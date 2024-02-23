@@ -1,6 +1,12 @@
 :root {
     --add-edit-bg: #eae0cc;
     --add-save: #f49f0a;
+    --primary: #f49f0a;
+    --acent: #FD3D7B;
+    /* --add-save: #f49f0a;
+    --add-save: #f49f0a;
+    --add-save: #f49f0a;
+    --add-save: #f49f0a; */
 }
 
 .Home {
@@ -12,34 +18,57 @@
     flex-direction: column;
     align-items: center;
 }
-.AddEdit__show {
-    background-color: var(--add-save);
-    width: 100px;
-    padding: 10px;
-    border-radius: 7px;
-    color: var(--add-edit-bg);
+
+/* NAVIGATION BAR */
+.Home__navigation {
+    width: 100%;
+    background-color: var(--task-date-color);
+    z-index: 98;
+    padding: 20px 40px;
     position: fixed;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 2px solid var(--add-edit-bg);
-    z-index: 101;
-    box-shadow: 0px 0px 10px 10px rgb(255, 85, 0);
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+/* STYLE ADD BUTTON  */
+.Home__add-edit {
+    background-color: var(--add-save);
+    width: fit-content;
+    padding: 7px;
+    border-radius: 10px;
+    color: var(--add-edit-bg);
+    border: 2px solid black;
+    font-size: 25px;
+    font-weight: 700;
+    position: relative;
+    /* box-shadow: 0px 2px 20px 10px rgb(192, 89, 38); */
+    /* rgb(255, 85, 0) */
 }
 
 .AddEdit__cancel {
-    background-color: rgb(255, 85, 0);
+    background-color: var(--add-edit-bg);
     width: 50px;
-    height: 50px;
-    font-size: 30px;
+    /* height: 50px; */
+    /* font-size: 30px; */
     position: absolute;
-    top: 40px;
-    right: 20px;
+    /* top: 40px;
+    right: 20px; */
     border-radius: 50%;
     border: none;
-    box-shadow: 5px 5px 20px 2px #f49f0a;
+    /* box-shadow: 5px 5px 20px 2px #f49f0a; */
     z-index: 101;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
+
+.Home_icon {
+    width: 40px;
+}
+
 .Home__fixed-items {
     z-index: 100;
     position: fixed;
@@ -51,14 +80,42 @@
     width: 100vw;
     height: 100vh;
     padding: 10px;
-    /* background-color: #ffffff99; */
     backdrop-filter: blur(2px);
-    opacity: 0.8;
-    position: absolute;
+    opacity: 0.85;
+    position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: -1;
-    background-image: radial-gradient(#ffffff, #e68484);
+    z-index: 1;
+    background-image: radial-gradient(#000000, #e68484);
 }
 
+.Home__delete-all-warning, .Home__show-info{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background-color: var(--add-save);
+    padding: 40px 20px 20px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 200px;
+}
+
+.Home__delete-all-warning > img, .Home__show-info>img {
+    width: 50px;
+}
+
+.Home__close-button{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+.Home__delete-all-warning>:nth-child(4){
+    padding-top: 30px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}

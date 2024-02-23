@@ -1,7 +1,7 @@
 import './style.css'
 import trashsolid from '../../assets/trash-solid.svg'
-import star from '../../assets/star-on.svg'
-import starOff from '../../assets/star-off.svg'
+// import star from '../../assets/star-on.svg'
+// import starOff from '../../assets/star-off.svg'
 import {useState} from 'react'
 
 const EachTask = (props) => {
@@ -11,11 +11,8 @@ const EachTask = (props) => {
 	}
 	const showMore = ['EachTask__detail-show', 'EachTask__detail-hide']
 
-	// const [moreOption, setMoreOption] = useState(1)
-	// function handleShowMore() {
-	// 	moreOption === 0 ? setMoreOption(1) : setMoreOption(0)
-	// }
-	// const showMoreOption = ['EachTask__more-open', 'EachTask__more-close']
+	const [showOption, setShowOption] = useState(1)
+	const showMoreOption = ['EachTask__more-open', 'EachTask__more-close']
 	return (
 		<div className='EachTask'>
 			<div className='EachTask__main'>
@@ -37,9 +34,64 @@ const EachTask = (props) => {
 					</div>
 				</div>
 
-				<div className='EachTask__more-open'>
+				<div className={showMoreOption[showOption]}>
+					<button
+						className='EachTask__clickForMore'
+						onClick={() => {
+							setShowOption(0)
+						}}
+						style={{fontSize: '40px', justifyContent: 'flex-end'}}
+					>
+						⁝
+					</button>
 					<div className='star-delete'>
-						<button
+						<div className='delete-more'>
+							<button
+								// DELETE
+								className='EachTask__more-options delete'
+								onClick={props.deleteTask}
+								value={props.thisTaskId}
+								style={{fontSize: '30px', color: 'red'}}
+							>
+								🗑
+							</button>
+							<div
+								// VIEW DESCRIPTION
+								onClick={handleShowMore}
+								value={props.thisTaskId}
+								className='EachTask__more-options more'
+							>
+								{more === 0 ? 'Less ⬆' : 'more ⬇'}
+							</div>
+						</div>
+
+						{
+							// CLOSE MORE
+							<button
+								className='EachTask__clickForMore'
+								onClick={() => {
+									setShowOption(1)
+									setMore(1)
+								}}
+								style={{fontSize: '30px'}}
+							>
+								✖
+							</button>
+						}
+					</div>
+				</div>
+			</div>
+			<div className={showMore[more]}>
+				{<p className='EachTask__task-desc'>{props.thisTask.taskDesc}</p>}
+			</div>
+		</div>
+	)
+}
+
+export default EachTask
+
+{
+	/* <button
 							// STARRED
 							onClick={props.changeStarredStatus}
 							value={props.thisTaskId}
@@ -60,31 +112,5 @@ const EachTask = (props) => {
 									src={starOff}
 								></img>
 							)}
-						</button>
-						<button
-							// DELETE
-							onClick={props.deleteTask}
-							value={props.thisTaskId}
-							className='EachTask__more-options delete'
-						>
-							<img src={trashsolid} alt='delete button' />
-						</button>
-					</div>
-					<div
-						// VIEW DESCRIPTION
-						onClick={handleShowMore}
-						value={props.thisTaskId}
-						className='EachTask__more-options more'
-					>
-						{more === 0 ? 'Less' : 'More'}
-					</div>
-				</div>
-			</div>
-			<div className={showMore[more]}>
-				{<p className='EachTask__task-desc'>{props.thisTask.taskDesc}</p>}
-			</div>
-		</div>
-	)
+						</button> */
 }
-
-export default EachTask

@@ -10,6 +10,7 @@
 .EachTask__left {
     display: flex;
 }
+
 .EachTask__data {
     display: flex;
     gap: 5px;
@@ -35,8 +36,21 @@
     gap: 5px;
 }
 
-.EachTask__more-close {
+.EachTask__more-close > .EachTask__clickForMore {
+    display: flex;
+    align-items: center;
+}
+
+.EachTask__more-close > .EachTask__more-options, .EachTask__more-close > .star-delete {
     display: none;
+}
+
+.EachTask__more-open > .EachTask__clickForMore {
+    display: none;
+}
+
+.EachTask__more-open > .EachTask__more-options, .EachTask__more-open > .star-delete {
+    display: flex;
 }
 
 button {
@@ -52,44 +66,50 @@ button {
 
 button:hover, .more:hover {
     cursor: pointer;
-    user-select: none;
-}
-
-.more {
-    border-top: 2px solid red;
-    padding-top: 2px;
-}
-
-.star-delete {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.star {
-    width: 25px;
-    /* height: 30px; */
+    /* user-select: none; */
 }
 
 .delete {
-    width: 20px;
+    
 }
 
+.more {
+    border-top: 1px solid red;
+    padding: 10px 10px 0 10px;
+    min-width: 58px;
+    box-shadow: 0 5px 5px 0 green;
+    border-radius: 3px;
+}
+
+.delete-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .EachTask__detail-show {
-    color: rgb(37, 37, 37);
+    color: white;
     padding: 10px 20px;
-    background-color: #6b5fbd;
+    background-color: var(--task-date-color);
     background-image: linear-gradient(black white);
     width: 90%;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    animation: show-detail 0.3s ;
     border-radius: 0 0 7px 7px;
+    box-shadow: 0 5px 10px 2px green;
+}
+@keyframes show-detail {
+    from {opacity: 0;;}
+    to {opacity: 1;;}    
 }
 
 .EachTask__detail-hide {
     display: none;
 }
+
 
 @media (min-width:950px) {
     .EachTask {

@@ -13,13 +13,24 @@ function Header(props) {
 	return (
 		<div className='Header'>
 			{<DisplayDate />}
-			<p className='Header__stats'>
-				<span>{props.taskStats}</span>
+			<div className='Header__stats'>
+				<span className='Header__stats-todo'>{props.taskStats}</span>
 				<span> of </span>
-				<span>{props.totalTasks}</span>
-			</p>
+				<span className='Header__stats-total'>{props.totalTasks}</span>
+				<span>Tasks</span>
+			</div>
 		</div>
 	)
 }
 
 export default Header
+{
+	/* <div>
+				<p className='Header__stats'>
+					<span className='Header__stats-todo'>{props.taskStats}</span>
+					<span className> of </span>
+					<span className='Header__stats-total'>{props.totalTasks}</span>
+				</p>
+				<p>Tasks</p>
+			</div> */
+}

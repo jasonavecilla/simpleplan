@@ -6,7 +6,6 @@ import {useState} from 'react'
 
 function App() {
 	const [timer, setTimer] = useState(0)
-	// console.log('timeout is : ' + timer)
 
 	function handleSetTimer() {
 		setTimer(2)
@@ -14,7 +13,6 @@ function App() {
 
 	setTimeout(() => {
 		handleSetTimer()
-		// console.log('timeout is now: ' + timer)
 	}, 2000)
 	return (
 		<>

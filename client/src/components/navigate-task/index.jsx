@@ -7,7 +7,6 @@ const NavigateTask = (props) => {
 	return (
 		<div className='NavigateTasks'>
 			<div className='NavigateTasks__categories'>
-				<p>Categories :</p>
 				<span>Fun</span>
 				<span>School</span>
 				<span>Chores</span>

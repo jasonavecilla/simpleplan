@@ -12,7 +12,7 @@
 }
 
 .AddEdit__form {
-    margin-top: calc(20vw);
+    margin-top: calc(25vh);
     padding: 20px;
 }
 
@@ -49,7 +49,11 @@
     font-size: 20px;
     padding: 5px;
     width: 100%;
-    border: 2px solid black;
+    border: 2px solid var(--primary);
+}
+
+.AddEdit__input-typed {
+    background-color: rgb(190, 209, 244);
 }
 
 @media (min-width:450px) {
@@ -58,6 +62,6 @@
 }
 
 .AddEdit__form {
-    margin-top: 250px;
+    /* margin-top: 350px; */
 }
 }
