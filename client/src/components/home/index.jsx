@@ -21,9 +21,9 @@ const Home = () => {
 		let thisId = 0
 		if (data.length > 0) {
 			thisId = data[data.length - 1].taskId
-			console.log(thisId)
+			// console.log(thisId)
 		} else {
-			console.log('the else thisID: ' + thisId)
+			// console.log('the else thisID: ' + thisId)
 		}
 		return thisId
 		// try {

@@ -17,7 +17,7 @@
     z-index: 1000;
     position: absolute;
     width: 100vw;
-    animation: welcomepage 2s ease-out;
+    animation: welcomepage 2.5s ease-out;
 }
 
 .Welcome :nth-child(1) {

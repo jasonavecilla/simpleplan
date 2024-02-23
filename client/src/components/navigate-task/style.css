@@ -66,7 +66,7 @@
     background-color: red;
     border-radius: 50%;
     left: 45px;
-    transition: 1s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .NavigateTasks__completion-section> :nth-child(1) {background-color: green; font-weight: 700;padding: 2px 10px; border-radius: 7px;}
