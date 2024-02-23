@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
-
 # App Name (SimplePlan)
 
 ## Overview
@@ -51,5 +47,3 @@
 @BreeMudi - Developer
 
 @Alex Shef - Developer
-
-> > > > > > > 4d28b468e54cddef6b9db392366fce1418ae6a4d
