@@ -14,7 +14,13 @@
 - Add task
 - Add title and description for each task
 - Mark task completed
-- See only to dos (hide completed tasks)
+- slider to toggle uncompleted and completed tasks
+
+## App Experience
+
+explore the simplePlan app via [live site](https://chingu-voyages.github.io/v47-tier2-team-13/)
+
+![Mobile View](./public/mobile-view.png)
 
 ## Team Documents
 
